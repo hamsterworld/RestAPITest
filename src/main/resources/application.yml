@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9001
 
 spring:
   datasource:
@@ -14,6 +14,10 @@ spring:
       hibernate:
       # show_sql: true
         format_sql: true
+  message:
+    basename: messages
 
 logging.level:
   org.hibernate.SQL: debug
+
+
