@@ -26,6 +26,7 @@ import java.util.*;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    //swagger가 안먹힐때는 applicaton.yml에서 또다른설정이 필요하다.
     private static final Contact DEFAULT_CONTACT = new Contact("in seok oh","http://www.joneconsulting.co.kr","ssoboro1@gmail.com");
 
     private static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Awesome API Title","My User management REST API service",
@@ -42,6 +43,7 @@ public class SwaggerConfig {
                 .consumes(DEFAULT_PRODUCES_AND_CONSUMES);
     }
 
+    //actuato때문에 해준설정
     @Bean
     public WebMvcEndpointHandlerMapping webEndpointServletHandlerMapping(WebEndpointsSupplier webEndpointsSupplier, ServletEndpointsSupplier servletEndpointsSupplier, ControllerEndpointsSupplier controllerEndpointsSupplier, EndpointMediaTypes endpointMediaTypes, CorsEndpointProperties corsProperties, WebEndpointProperties webEndpointProperties, Environment environment) {
         List<ExposableEndpoint<?>> allEndpoints = new ArrayList();
